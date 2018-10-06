@@ -7,6 +7,7 @@
 //
 
 #include "slam.hpp"
+#include "Matrix.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -29,19 +30,15 @@ int main(int argc, const char * argv[]) {
     
     print_vector(p);
     
-    matrix mat1 =
-                {{1,2,3},
-                 {4,5,6}
-                };
+    /* 两种初始化对象的方法 */
+    Matrix mat1({{1,2,3},{4,5,6}});
+    Matrix mat2 = mat1.matrix_transpose();
+    Matrix mat3 = Matrix({{1,1,1},{2,2,2}});
+    Matrix mat4 = mat1.matrix_addition(mat3);
+    mat1.matrix_print();
+    mat2.matrix_print();
+    mat4.matrix_print();
     
-    matrix mat2 =
-                {{2,4},
-                 {6,8},
-                 {10,12},
-                };
-    matrix new_mat = mat1*mat2;
-    
-    print_matrix(new_mat);
     
     return 0;
 }

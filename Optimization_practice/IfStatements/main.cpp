@@ -3,7 +3,7 @@
 
 using namespace std;
 int main(int argc, const char * argv[]) {
-    
+
     std::clock_t start;
     double duration_one, duration_two;
     start = std::clock();
@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
             cout << "medium \n";
         }
         else if (i <= 37) {
-            
+
             cout << "medium-high \n";
         }
         if (i > 37) {
@@ -33,22 +33,23 @@ int main(int argc, const char * argv[]) {
 
   	// optimize the if statements below
     for (int i = 0; i < 100000; i++) {
-        if (i > 0 && i < 5) {
-            cout <<  "low \n";
-        }
-        else if (i <= 10) {
-            cout << "low-medium \n";
-        }
-        else if (i <= 35) {
-            cout << "medium \n";
-        }
-        else if (i <= 37) {
-            
-            cout << "medium-high \n";
-        }
         if (i > 37) {
             cout << "high \n";
         }
+        else if (i > 35) {
+
+            cout << "medium-high \n";
+        }
+        else if (i > 10) {
+            cout << "medium \n";
+        }
+        else if (i >= 5) {
+            cout << "low-medium \n";
+        }
+        else if (i > 0) {
+            cout <<  "low \n";
+        }
+        
     }
     duration_two = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
 

@@ -19,21 +19,21 @@ int main(int argc, const char * argv[]) {
     int num_cols = 5;
     int intitial_value = 5;
     int iterations = 100000;
-    
+
     std::clock_t start_one, start_two;
     double duration_one, duration_two;
 
     // nested for loop
     start_one = std::clock();
-    
+
     for (int i = 0; i < iterations; i++) {
         matrix = initialize_matrix(num_rows, num_cols, intitial_value);
     }
-    
+
     duration_one = ( std::clock() - start_one ) / (double) CLOCKS_PER_SEC;
 
     start_two = std::clock();
-    
+
     for (int i = 0; i < iterations; i++) {
         // TODO: Change the code in initialize_matrix_improved.cpp
         // The solution should not use nested for loops
@@ -47,7 +47,7 @@ int main(int argc, const char * argv[]) {
     print(matrix);
     cout << "matrix_improved \n";
     print(matrix_improved);
-    
+
     // print the time results to the terminal
     cout << "duration milliseconds original code: " << 1000 * duration_one << '\n';
     cout << "duration milliseconds improved code: " << 1000 * duration_two << '\n';

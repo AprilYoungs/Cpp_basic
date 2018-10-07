@@ -3,8 +3,8 @@
 
 using namespace std;
 int main(int argc, const char * argv[]) {
-    
-    
+
+
     std::clock_t start;
     double duration_one, duration_two;
     start = std::clock();
@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
             cout << "medium \n";
         }
         else if (i <= 37) {
-            
+
             cout << "medium-high \n";
         }
         else {
@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
             cout << "medium \n";
         }
         else if (i >= 5) {
-            
+
             cout << "low-medium \n";
         }
         else {

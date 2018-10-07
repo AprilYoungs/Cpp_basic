@@ -3,7 +3,7 @@
 using namespace std;
 
 vector < vector <float> > blur_factor_improved() {
-        
+
     // calculate blur factors
     static float blurring_improved = .12;
     static float center_improved = 1.0 - blurring_improved;
@@ -16,7 +16,6 @@ vector < vector <float> > blur_factor_improved() {
         {adjacent_improved, center_improved, adjacent_improved},
         {corner_improved, adjacent_improved, corner_improved}
     };
-    
+
     return window_improved;
 }
-

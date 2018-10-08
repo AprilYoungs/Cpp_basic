@@ -30,33 +30,33 @@ vector < vector <float> > blur(vector < vector < float> > grid, float blurring) 
 		row.clear();
 		for (j=0; j<3; j++) {
 			switch (i) {
-				case 0: 
+				case 0:
 				switch (j) {
-					case 0: 
+					case 0:
 					val = corner;
 					break;
 
-					case 1: 
+					case 1:
 					val = adjacent;
 					break;
 
-					case 2: 
+					case 2:
 					val = corner;
 					break;
 				}
-				break; 
+				break;
 
 				case 1:
 				switch (j) {
-					case 0: 
+					case 0:
 					val = adjacent;
 					break;
 
-					case 1: 
+					case 1:
 					val = center;
 					break;
-					
-					case 2: 
+
+					case 2:
 					val = adjacent;
 					break;
 				}
@@ -64,15 +64,15 @@ vector < vector <float> > blur(vector < vector < float> > grid, float blurring) 
 
 				case 2:
 				switch(j) {
-					case 0: 
+					case 0:
 					val = corner;
 					break;
 
-					case 1: 
+					case 1:
 					val = adjacent;
 					break;
-					
-					case 2: 
+
+					case 2:
 					val = corner;
 					break;
 				}

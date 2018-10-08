@@ -14,13 +14,15 @@ using namespace std;
 
 int main() {
 
-	// number of iterations 
+	// number of iterations
 	int iterations = 10000;
 
 	std::clock_t start;
 	double duration;
 
-	vector < vector <char> > grid { {'r', 'g', 'r', 'r', 'r'}, {'g', 'r', 'r', 'g', 'g'}, {'r', 'g', 'r', 'r', 'r'} };
+	vector < vector <char> > grid { {'r', 'g', 'r', 'r', 'r'},
+																	{'g', 'r', 'r', 'g', 'g'},
+	 																{'r', 'g', 'r', 'r', 'r'} };
 	vector< vector <float> > beliefs;
 
 	cout << "number of iterations: " << iterations << " " << "\n";

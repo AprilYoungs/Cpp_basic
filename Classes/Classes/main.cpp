@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include "Inheritance.hpp"
+#include "Polymorphism.hpp"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ public:
 
 Student::~Student()
 {
-    cout << "Tilda" << endl;
+    cout << "Tada,deconstruct" << endl;
 }
 
 Student::Student(string nameIn, uint ageIn)
@@ -84,8 +85,19 @@ int main(int argc, const char * argv[]) {
     p1.setName("Tedy");
     p1.setBreed("Pure");
     p1.setIdNumber(007);
-    
     p1.show();
+    
+    
+    /** Polymorphism */
+    cout << "-----------" << "Polymorphism" << "--------------" << endl;
+    Animal *ani;
+    ani = new Animal();
+    ani->type = "Snake";
+    ani->bark();
+    
+    ani = new Cat();
+    ani->type = "cat";
+    ani->bark();
     
     return 0;
 }

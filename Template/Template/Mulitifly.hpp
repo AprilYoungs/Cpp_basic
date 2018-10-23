@@ -11,6 +11,11 @@
 
 #include<stdio.h>
 
+/** Because templates are compiled when required, this forces a restriction for multi-file projects: the implementation (definition) of a template class or function must be in the same file as its declaration. That means that we cannot separate the interface in a separate header file, and that we must include both interface and implementation in any file that uses the templates.
+ 
+ Since no code is generated until a template is instantiated when required, compilers are prepared to allow the inclusion more than once of the same template file with both declarations and definitions in a project without generating linkage errors.
+ */
+
 template <class T>
 class Mulitifly
 {
@@ -40,5 +45,44 @@ template <class T>
 T Mulitifly<T>::product() {
     return a*b;
 }
+
+/** specialization type */
+template <>
+class Mulitifly<char>
+{
+public:
+    char a,b;
+    
+    Mulitifly(){a='a';b='b';};
+    Mulitifly(char i,char j){a=i;b=j;};
+    char product()
+    {
+        return 'v';
+    };
+};
+
+/** Non-type */
+template <class T, int N>
+class ClassRoom {
+    T students [N];
+    
+public:
+    ClassRoom(){}
+    ClassRoom(T defaultValue)
+    {
+        for (int i=0; i < N; i++)
+        {
+            students[i] = defaultValue;
+        }
+    }
+    void setStu(T value, int n)
+    {
+        students[n] = value;
+    }
+    T getStu(int n)
+    {
+        return students[n];
+    }
+};
 
 #endif /* Mulitifly_hpp */

@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <string>
+#include "Inheritance.hpp"
 
 using namespace std;
 
@@ -47,6 +48,16 @@ void Student::show()
     cout << "Name: " << name << ",age: " << age << endl;
 };
 
+class GraduateStu: public Student
+{
+public:
+    string job;
+    void show()
+    {
+        cout << "Name: " << name << ",age: " << age << ",Job: " << job << endl;
+    }
+};
+
 int main(int argc, const char * argv[]) {
     
     /** 可以不用初始化,自动初始化 */
@@ -62,6 +73,19 @@ int main(int argc, const char * argv[]) {
     {
         classroom[i].show();
     }
+    
+    GraduateStu g;
+    g.age = 24;
+    g.name = "Jobs";
+    g.job = "iOS developer";
+    g.show();
+    
+    Pet p1;
+    p1.setName("Tedy");
+    p1.setBreed("Pure");
+    p1.setIdNumber(007);
+    
+    p1.show();
     
     return 0;
 }

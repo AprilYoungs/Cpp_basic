@@ -19,6 +19,7 @@
 template <class T>
 class Mulitifly
 {
+    
 public:
     T a,b;
     

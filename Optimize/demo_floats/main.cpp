@@ -9,7 +9,7 @@ int main() {
     // Float represented with 32 bits
     float example = 97.148;
     char binary[sizeof(float)];
-    
+//fhfjf    
     memcpy(binary, &example, sizeof(float));
     
     std::cout << "\n 32-bit float 97.148:  " << "\n";
